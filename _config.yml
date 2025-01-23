@@ -20,6 +20,7 @@ kramdown:
 plugins:
   - jekyll-feed    # 自动生成 RSS Feed
   - jekyll-seo-tag # 添加 SEO 支持
+  - jekyll-include-cache
 
 # 页面导航（可选）
 defaults:
