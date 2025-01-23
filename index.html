@@ -3,28 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <title>景逸的</title>
+    <link rel="stylesheet" href="css/m1.css">
+    <script src="js/m1.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GD2FH3SFLR"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-GD2FH3SFLR');
     </script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="README">README</a>
-    </nav>
-
-    <h1>Welcome to My Website!</h1>
-    <p>This is my personal website powered by GitHub Pages.</p>
+  <!-- 桌面 -->
+  <div class="desktop">
+    <div class="header" style="position: relative; top: 0; left: 0; right: 0; height: 30px; background-color: #f0f0f0; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; box-shadow: 0 1px 5px rgba(0,0,0,0.2);">
+      <span id="user-name">景逸</span>
+      <span id="current-time" style="font-size: 14px; color: #666; position: relative; right: 0;"></span>
+    </div>
+    <!-- 图标 -->
+    <div class="icon" ondblclick="openFolder('folder1')">
+      <img src="images/folder-icon.png" alt="Folder">
+      <span>Documents</span>
+    </div>
+    <div class="icon" ondblclick="openFile('pic1')">
+      <img src="images/photo-icon.jpg" alt="Picture">
+      <span>Picture</span>
+    </div>
+    <div class="icon" ondblclick="openFolder('folder3')">
+      <img src="images/folder-icon.png" alt="Folder">
+      <span>Downloads</span>
+    </div>
+    <div class="icon" ondblclick="openFolder('folder4')">
+      <img src="images/folder-icon.png" alt="Photos">
+      <span>Pictures</span>
+    </div>
+    <!-- 文件夹窗口 -->
+    <div class="folder-window" id="folder1" style="position: absolute;">
+      <div class="folder-header">
+        <span>Documents</span>
+        <button onclick="closeFolder('folder1')">X</button>
+      </div>
+      <div class="folder-content">
+        <div class="file-icon">
+          <img src="images/folder-icon.png" alt="File">
+          <span>文件夹1</span>  
+        </div>
+        <div class="file-icon">
+          <img src="images/folder-icon.png" alt="File">
+          <span>文件夹2</span>
+        </div>
+      </div>
+    </div>
+    <div class="folder-window" id="pic1" style="position: absolute; height: 40%;">
+      <div class="folder-header">
+        <span>Picture</span>
+        <button onclick="closeFolder('pic1')">X</button>
+      </div>
+      <div class="folder-content">
+        <img src="images/photo-icon.jpg" alt="Picture">
+      </div>
+    </div>
+    <div class="folder-window" id="folder3" style="position: absolute;">
+      <div class="folder-header">
+        <span>Downloads</span>
+        <button onclick="closeFolder('folder3')">X</button>
+      </div>
+      <div class="folder-content">
+        <div class="file-icon">
+          <img src="images/folder-icon.png" alt="File">
+          <span>文件夹3</span>  
+        </div>
+        <div class="file-icon">
+          <img src="images/folder-icon.png" alt="File">
+          <span>文件夹4</span>
+        </div>
+      </div>
+    </div>
+    <div class="folder-window" id="folder4" style="position: absolute;">
+      <div class="folder-header">
+        <span>Pictures</span>
+        <button onclick="closeFolder('folder4')">X</button>
+      </div>
+      <div class="folder-content">
+        <div class="file-icon">
+          <img src="images/photo-icon.jpg" alt="File">
+          <span>图片3</span>  
+        </div>
+        <div class="file-icon">
+          <img src="images/photo-icon.jpg" alt="File">
+          <span>图片4</span>
+        </div>
+      </div>
+    </div>
+    <!-- Dock -->
+    <div class="dock">
+      <div class="dock-icon" ondblclick="openFolder('folder3')">
+        <img src="images/folder-icon.png" alt="App 1" width="100" height="100">
+      </div>
+      <div class="dock-icon" ondblclick="openFolder('folder4')">
+        <img src="images/folder-icon.png" alt="App 2" width="100" height="100">
+      </div>
+    </div>
+  </div>
 </body>
 </html>
