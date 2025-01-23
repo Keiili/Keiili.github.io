@@ -1,0 +1,41 @@
+# 网站基本信息
+title: My GitHub Pages Website  # 网站标题，会显示在页面标题和部分主题中
+description: Welcome to my personal website powered by GitHub Pages  # 网站描述
+author: Keiili  # 网站作者信息
+
+# GitHub Pages 配置
+baseurl: ""  # 如果是根目录（username.github.io），保持为空；如果是子项目，填写子目录名
+url: "https://keiili.github.io"  # 网站的完整 URL
+
+# 主题设置
+theme: minima  # 使用的主题（GitHub Pages 支持的主题）
+
+# Markdown 配置
+markdown: kramdown  # 使用 kramdown 解析器（GitHub 默认支持）
+kramdown:
+  input: GFM  # 启用 GitHub Flavored Markdown 支持（例如表格、任务列表）
+
+# 高级功能
+plugins:
+  - jekyll-feed    # 自动生成 RSS Feed
+  - jekyll-seo-tag # 添加 SEO 支持
+
+# 页面导航（可选）
+defaults:
+  - scope:
+      path: ""  # 应用于所有文件
+    values:
+      layout: default  # 指定布局文件，位于 _layouts/default.html
+
+# 不包括的文件或目录
+exclude:
+  - README.md  # 防止 README.md 出现在页面中
+
+# 包括的文件或目录（即使在 .gitignore 中）
+include:
+  - _config.yml
+
+# 自定义变量（可用于 Jekyll 模板中）
+custom:
+  contact_email: kamliid@outlook.com  # 自定义变量：联系邮箱
+  github_link: https://github.com/keiili  # 自定义变量：GitHub 链接
